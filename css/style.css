@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: hsl(0, 0%, 90%);
+  min-height: 100vh;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  user-select: none;
+}
+
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  padding-block: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.2);
+}
+.wrapper .title {
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0 0 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1.5px solid hsl(121, 65%, 60%);
+}
+.wrapper .container {
+  padding: 2rem;
+}
+.wrapper .container .input form {
+  height: 4rem;
+  display: flex;
+  border: 1.5px solid hsl(121, 97%, 25%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.wrapper .container .input form input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font: inherit;
+  padding-inline: 1rem;
+}
+.wrapper .container .input form .add {
+  width: 20%;
+  background-color: hsl(121, 65%, 60%);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-left: 1.5px solid hsl(121, 97%, 25%);
+}
+.wrapper .container .filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid hsl(121, 97%, 25%);
+}
+.wrapper .container .filter-section .filter {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.wrapper .container .filter-section .filter li {
+  cursor: pointer;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+.wrapper .container .filter-section .filter li.active {
+  color: hsl(121, 97%, 25%);
+}
+.wrapper .container .filter-section .del {
+  background-color: hsl(121, 97%, 25%);
+  color: aliceblue;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.wrapper .container .todos {
+  margin-block: 1rem;
+}
+.wrapper .container .todos .todo {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.wrapper .container .todos .todo:hover {
+  background-color: hsl(120, 100%, 91%);
+}
+.wrapper .container .todos .details {
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.wrapper .container .todos .details label.done {
+  cursor: pointer;
+  text-decoration: line-through;
+  color: lightgray;
+}
+.wrapper .container .todos .details label.pending {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.wrapper .container .todos .actions {
+  display: flex;
+  gap: 1rem;
+}
+.wrapper .container .todos .actions .bx-edit {
+  color: hsl(34, 92%, 58%);
+  font-size: 1.8rem;
+}
+.wrapper .container .todos .actions .bx-trash {
+  color: hsl(3, 61%, 51%);
+  font-size: 1.8rem;
+}
+
+/*# sourceMappingURL=style.css.map */

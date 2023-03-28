@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- custom js file -->
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <main class="wrapper">
+
+        <h1 class="title">Todo App</h1>
+
+        <div class="container">
+
+            <div class="input">
+                <form data-form>
+                    <input type="text" placeholder="Add Task..." data-input>
+                    <button class="add" data-add>Add</button>
+                </form>
+            </div>
+
+            <div class="filter-section">
+                <ul class="filter">
+                    <li class="active" data-filter>All</li>
+                    <li data-filter>Completed</li>
+                    <li data-filter>Pending</li>
+                </ul>
+
+                <button class="del" data-del-all>Delete All</button>
+            </div>
+
+            <ul class="todos" data-todo-container>
+                <!-- all todos here -->
+            </ul>
+
+        </div>
+
+    </main>
+</body>
+</html>

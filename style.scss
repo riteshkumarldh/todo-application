@@ -1,0 +1,181 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap');
+
+// variables
+$dark-green: hsl(121, 97%, 25%);
+$light-green: hsl(121, 65%, 60%);
+$lighten-green: hsl(120, 100%, 91%);
+$white: hsl(0, 0%, 100%);
+$yellow: hsl(34, 92%, 58%);
+$red: hsl(3, 61%, 51%);
+$ff-Roboto: 'Roboto Mono', monospace;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }
+
+button { all: unset; cursor: pointer;}
+
+body {
+    font-family: $ff-Roboto;
+    background-color: hsl(0, 0%, 90%);
+    min-height: 100vh;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex($jc: center){
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+label { user-select: none; }
+
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding-block: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 6px hsl(0, 0%, 0%, 0.2);
+
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+        padding: 0 0 1rem 3rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 1.5px solid $light-green;
+    }
+
+    .container {
+        padding: 2rem;
+
+        .input {
+            
+            form {
+                height: 4rem;
+                display: flex;
+                border: 1.5px solid $dark-green;
+                border-radius: .5rem;
+                overflow: hidden;
+
+
+                input {
+                    height: 100%;
+                    width: 80%;
+                    border: none;
+                    outline: none;
+                    font-size: 2rem;
+                    font: inherit;
+                    padding-inline: 1rem;
+                }
+    
+                .add {
+                    width: 20%;
+                    background-color: $light-green;
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 1.5px;
+                    cursor: pointer;
+                    border-left: 1.5px solid $dark-green;
+    
+                }
+            }
+        }
+
+        .filter-section {
+            @include flex(space-between);
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid $dark-green;
+
+            .filter {
+                list-style-type: none;
+                @include flex();
+                gap: 1rem;
+                
+                li {
+                    cursor: pointer;
+                    color: hsl(0, 0%, 0%, 0.5);
+
+                    &.active {
+
+                        color: $dark-green;
+                    }
+                }
+
+                
+            }
+
+            .del {
+                background-color: $dark-green;
+                color: aliceblue;
+                font-weight: 300;
+                text-align: center;
+                letter-spacing: 0.5px;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .todos {
+            margin-block: 1rem;
+
+            .todo {
+                list-style-type: none;
+                @include flex(space-between);
+                padding: 1rem;
+
+                &:hover {
+                    background-color: $lighten-green;
+                }
+            }
+
+            .details {
+                padding-right: 1rem;
+                @include flex();
+                gap: 1rem;
+                
+                label.done {
+                    cursor: pointer;
+                    text-decoration: line-through;
+                    color: lightgray;
+                }
+                
+                label.pending {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            .actions {
+                display: flex;
+                gap: 1rem;
+
+                .bx-edit {
+                    color: $yellow;
+                    font-size: 1.8rem;
+                }
+                
+                .bx-trash {
+                    color: $red;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
